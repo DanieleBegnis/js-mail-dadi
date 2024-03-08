@@ -8,6 +8,14 @@ let emailfound = false;
 //controllo ogni singola mail rispetto a quella inserita
 for(let i = 0; i < loggedMail.length; i++) {
     const thisMail = loggedMail[i];
+    if (thisMail === promptEmail) {
+        emailfound = true;
+    }
 }
 
 //stampo messaggio di successo se può accedere, altresì di fallimento
+if (emailfound === true) {
+    alert('mail inserita correttamente!');
+} else {
+    alert('mail errata :(')
+}
